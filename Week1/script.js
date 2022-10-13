@@ -1,24 +1,26 @@
 "use strict";
 
-// {let chamber = 0;
-// const warning = `He's got a gun!`;
+{
+  let chamber = 0;
+  const warning = `He's got a gun!`;
 
-// //Short circuiting the && operator
-// !chamber && console.log(warning);
+  //Short circuiting the && operator
+  !chamber && console.log(warning);
 
-// let gunGoes;
+  let gunGoes;
 
-// if (chamber > 0) {
-//   gunGoes = `Bang!`;
-// } else {
-//   gunGoes = `Click.`;
-// }
+  if (chamber > 0) {
+    gunGoes = `Bang!`;
+  } else {
+    gunGoes = `Click.`;
+  }
 
-// if (gunGoes !== `click`) {
-//   console.log(`Hit thr dirt!!`);
-// } else {
-//   console.log(`Perferate 'em boys.`);
-// }}
+  if (gunGoes !== `click`) {
+    console.log(`Hit the dirt!!`);
+  } else {
+    console.log(`Perferate 'em boys.`);
+  }
+}
 
 let a = 9;
 let b = 5;
