@@ -67,6 +67,28 @@ if (typeof j !== `number`) {
   }
 }
 
+let k = 48;
+let l = 84;
+let m = 919;
+let n = 26;
+let o = 8;
+let p = k;
+
+if (p < l) {
+  p = l;
+}
+if (p < m) {
+  p = m;
+}
+if (p < n) {
+  p = n;
+}
+if (p < o) {
+  p = o;
+}
+
+console.log(p);
+
 let x = 3;
 let y = 1;
 let z = 5;
