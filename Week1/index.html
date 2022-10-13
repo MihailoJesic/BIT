@@ -7,5 +7,131 @@
     <title>BIT</title>
     <script src="./script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <h1>BIT Forms</h1>
+
+    <form action="#" method="post"></form>
+
+    <fieldset>
+      <legend>Test Form</legend>
+      <p>
+        <label>
+          Username:
+          <input
+            type="text"
+            name="username"
+            size="18"
+            maxlength="38"
+            required
+          />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Password:
+          <input
+            type="password"
+            name="password"
+            size="18"
+            maxlength="38"
+            required
+          />
+        </label>
+        <br />
+        <a href="./recover.html">Forgot password?</a>
+      </p>
+
+      <p>
+        <label>
+          Comments:
+          <textarea
+            name="comments"
+            placeholder="Your comment here..."
+            cols="30"
+            rows="3"
+          ></textarea>
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Choose one:
+          <input
+            type="radio"
+            name="radio-option"
+            value="1"
+            checked="cheacked"
+          />
+          1 <input type="radio" name="radio-option" value="2" /> 2
+          <input type="radio" name="radio-option" value="3" /> 3
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Choose all that apply:
+          <input type="checkbox" name="checkbox-option" value="1" />
+          1 <input type="checkbox" name="checkbox-option" value="2" /> 2
+          <input type="checkbox" name="checkbox-option" value="3" /> 3
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Choose an option from this list:
+          <select name="dropdown">
+            <option value="Alpha">Alpha</option>
+            <option value="Beta">Beta</option>
+            <option value="Gamma">Gamma</option>
+            <option value="Delta">Delta</option>
+          </select>
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Choose any options from this list that apply:
+          <select name="multi" multiple="multiple">
+            <option value="Alpha">Alpha</option>
+            <option value="Beta">Beta</option>
+            <option value="Gamma">Gamma</option>
+            <option value="Delta">Delta</option>
+          </select>
+        </label>
+      </p>
+
+      <p>
+        <label>
+          <input type="file" name="file-upload" />
+          <br />
+          <input type="submit" name="file-upload-button" value="Upload!!!" />
+        </label>
+      </p>
+
+      <p>
+        <label><input type="reset" value="reset" /></label>
+      </p>
+
+      <p>
+        <label> Departure Date: <input type="date" name="departure" /> </label>
+      </p>
+
+      <p>
+        <label>Email: <input type="email" name="email" required /></label>
+      </p>
+
+      <p>
+        <label>Site: <input type="url" name="site" required /></label>
+      </p>
+
+      <p>
+        <label
+          >Search:
+          <input type="search" name="search" placeholder="Enter Keyword..." />
+          <input type="submit" name="search-button" />
+        </label>
+      </p>
+    </fieldset>
+  </body>
 </html>
