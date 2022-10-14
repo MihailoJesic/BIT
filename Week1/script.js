@@ -160,3 +160,72 @@ if (epsilon > 20 && epsilon < 100) {
 } else if (epsilon > 100 && epsilon < 400) {
   console.log(`100 - 400`);
 }
+
+let day = 1;
+
+switch (day) {
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+    console.log(`Weekday`);
+    break;
+  case 6:
+  case 7:
+    console.log(`Weekend`);
+    break;
+  default:
+    console.log(`Must enter a value between 1 and 7`);
+}
+
+let month = 7;
+
+switch (month) {
+  case 11:
+  case 12:
+  case 1:
+    console.log(`Winter`);
+    break;
+  case 2:
+  case 3:
+  case 4:
+    console.log(`Spring`);
+    break;
+  case 5:
+  case 6:
+  case 7:
+    console.log(`Summer`);
+    break;
+  case 8:
+  case 9:
+  case 10:
+    console.log(`Fall`);
+    break;
+  default:
+    console.log(`Must enter a value between 1 and 12`);
+    break;
+}
+
+let first = 489;
+let second = 0;
+let operation = `/`;
+
+switch (operation) {
+  case `+`:
+    console.log(first + second);
+    break;
+  case `-`:
+    console.log(first - second);
+    break;
+  case `*`:
+    console.log(first * second);
+    break;
+  case `/`:
+    if (second == 0) {
+      console.log(`No dividing by 0`);
+      break;
+    }
+    console.log(first / second);
+    break;
+}
