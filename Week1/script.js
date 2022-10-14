@@ -229,3 +229,19 @@ switch (operation) {
     console.log(first / second);
     break;
 }
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(arr);
+
+arr[2] = `Three`;
+
+console.log(arr);
+
+arr.length = 3;
+
+console.log(arr);
+
+arr[3] = [9, 5, 1];
+
+console.log(arr[3][0]);
