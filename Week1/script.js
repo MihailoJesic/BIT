@@ -152,3 +152,11 @@ let delta = 23;
 if (gamma == 50 || delta == 50 || gamma + delta == 50) {
   console.log(true);
 }
+
+let epsilon = 360;
+
+if (epsilon > 20 && epsilon < 100) {
+  console.log(`20 - 100`);
+} else if (epsilon > 100 && epsilon < 400) {
+  console.log(`100 - 400`);
+}
