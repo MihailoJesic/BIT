@@ -110,3 +110,45 @@ if (x > y) {
     console.log(y, x, z);
   }
 }
+
+let q = 11;
+
+let result = ``;
+
+if (q % 3 == 0) {
+  result += `fizz`;
+}
+if (q % 5 == 0) {
+  result += `buzz`;
+}
+
+if (q % 3 !== 0 && q % 5 !== 0) {
+  console.log(`Not divisible`);
+} else {
+  console.log(result);
+}
+
+let w = 32;
+
+if (Math.abs(w - 13) > 13) {
+  console.log(Math.abs(w - 13) * 2);
+} else {
+  console.log(Math.abs(w - 13));
+}
+32;
+
+let alpha = 100;
+let beta = 100;
+
+if (alpha == beta) {
+  console.log(alpha * 6);
+} else {
+  console.log(alpha + beta);
+}
+
+let gamma = 27;
+let delta = 23;
+
+if (gamma == 50 || delta == 50 || gamma + delta == 50) {
+  console.log(true);
+}
