@@ -54,7 +54,7 @@
 // let sum = 0;
 
 // for (let i = 1; i <= 100; i++) {
-//   if (i % 3 == 0 || i % 5 == 0) {
+//   if (i % 3 == 0 && i % 5 == 0) {
 //     sum += i;
 //   }
 // }
@@ -132,17 +132,17 @@
 
 // #8
 
-for (let i = 1; i <= 100; i++) {
-  let text = ``;
-  if (i % 3 == 0) {
-    text += `fizz`;
-  }
-  if (i % 5 == 0) {
-    text += `buzz`;
-  }
-  if (i % 3 == 0 || i % 5 == 0) {
-    console.log(text);
-  } else {
-    console.log(i);
-  }
-}
+// for (let i = 1; i <= 100; i++) {
+//   let text = ``;
+//   if (i % 3 == 0) {
+//     text += `fizz`;
+//   }
+//   if (i % 5 == 0) {
+//     text += `buzz`;
+//   }
+//   if (i % 3 == 0 || i % 5 == 0) {
+//     console.log(text);
+//   } else {
+//     console.log(i);
+//   }
+// }
