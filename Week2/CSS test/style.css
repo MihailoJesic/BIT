@@ -54,3 +54,19 @@ td:first-child {
 p#footer {
   margin-top: 100px;
 }
+
+.p1 {
+  color: darkturquoise;
+}
+
+.p2 {
+  color: rgb(0, 206, 209);
+}
+
+.p3 {
+  color: #00ced1;
+}
+
+p {
+  background-color: darkslategrey;
+}
