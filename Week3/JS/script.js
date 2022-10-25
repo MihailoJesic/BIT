@@ -206,4 +206,242 @@ function most(arr) {
   return `The most frequent element is ${index[maxIndex][0]} with ${index[maxIndex][1]} occurances.`;
 }
 
-console.log(most(arr3));
+// console.log(most(arr3));
+
+// #2-1
+
+let arr4 = [3, 500, 12, 149, 53, 414, 1, 19];
+
+function minMax(arr) {
+  let min = Infinity;
+  let max = -Infinity;
+  let minIndex = 0;
+  let maxIndex = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+      minIndex = i;
+    }
+    if (arr[i] > max) {
+      max = arr[i];
+      maxIndex = i;
+    }
+  }
+  arr[minIndex] = max;
+  arr[maxIndex] = min;
+
+  return arr;
+}
+
+// console.log(arr4);
+// console.log(minMax(arr4));
+
+// #2-2
+
+let arr5 = [3, 500, -10, 149, 53, 414, 1, 19];
+
+function halvefive(arr) {
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let temp = arr[i] / 2 + 5;
+    if (temp == 0) {
+      temp = 20;
+    }
+    result[i] = temp;
+  }
+
+  return result;
+}
+
+// console.log(halvefive(arr5));
+
+// #2-3
+
+let students = [
+  `Micahel`,
+  `Anne`,
+  `Frank`,
+  `Joe`,
+  `John`,
+  `David`,
+  `Mark`,
+  `Bill`,
+];
+
+let scores = [50, 39, 63, 72, 99, 51, 83, 59];
+
+function grade(num) {
+  if (num < 61) {
+    return 6;
+  } else if (num < 71) {
+    return 7;
+  } else if (num < 81) {
+    return 8;
+  } else if (num < 91) {
+    return 9;
+  } else {
+    return 10;
+  }
+}
+
+function report(stu, sco) {
+  for (let i = 0; i < stu.length; i++) {
+    if (sco[i] < 61) {
+      console.log(
+        `${stu[i]} acquired ${sco[i]} points and failed to complete the exam.`
+      );
+    } else {
+      console.log(
+        `${stu[i]} acquired ${sco[i]} points and earned a ${grade(sco[i])}`
+      );
+    }
+  }
+}
+
+// report(students, scores);
+
+// #2-6
+
+let sum = 0;
+
+for (let i = 1; i <= 1000; i++) {
+  if (i % 2 == 0) {
+    sum += i;
+  } else if (i % 2 == 1 && i <= 500) {
+    sum -= i;
+  }
+}
+
+// console.log(sum * 12.5);
+
+// #2+7
+
+let arr6 = [
+  `M`,
+  `Anne`,
+  12,
+  `Steve`,
+  `Joe`,
+  `John`,
+  `David`,
+  `Mark`,
+  true,
+  `A`,
+];
+
+function cat2(arr) {
+  let string = ``;
+  arr.forEach((el) => {
+    if (el.length >= 2) {
+      string += el[0] + el[1];
+    }
+  });
+  return string;
+}
+
+// console.log(cat2(arr6));
+
+// #2-8
+
+let string1 = `Belgrade Institute of Technology`;
+
+function reverso(string) {
+  let output = ``;
+  for (let i = string.length - 1; i >= 0; i--) {
+    output += string[i];
+  }
+  return output;
+}
+
+// console.log(reverso(string1));
+
+// #2-9
+
+function combo(x) {
+  let count = 0;
+  let report = ``;
+  for (let i = 1; i <= x; i++) {
+    for (let j = 1; j <= x; j++) {
+      if (i != j) {
+        report += `(${i}, ${j})\n`;
+        count++;
+      }
+    }
+  }
+  return report + count;
+}
+
+// console.log(combo(7));
+
+// #2-10
+
+function primeotron(num) {
+  result = true;
+  if (num < 0 || num % 1 != 0) {
+    return false;
+  }
+
+  for (let i = Math.round(num / 2); i > 1; i--) {
+    if ((num / i) % 1 == 0) {
+      result = false;
+    }
+  }
+  return result;
+}
+
+// console.log(primeotron(103));
+
+// #2-11
+
+let string2 = `eye`;
+let string3 = `geek`;
+let string4 = `a nut for a jar of tuna`;
+
+function despacer(string) {
+  let result = ``;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] != ` `) {
+      result += string[i];
+    }
+  }
+  return result;
+}
+
+function palandromatic(rawString) {
+  let string = despacer(rawString);
+  let result = true;
+  for (let i = 0; i < string.length / 2; i++) {
+    if (string[i] !== string[string.length - i - 1]) {
+      result = false;
+    }
+  }
+  return result;
+}
+
+// console.log(palandromatic(string2));
+// console.log(palandromatic(string3));
+// console.log(palandromatic(string4));
+
+// #2-12
+
+function divisortron(x, y) {
+  let result = 0;
+  let smaller;
+  if (x > y) {
+    smaller = y;
+  } else {
+    smaller = x;
+  }
+
+  for (let i = 1; i <= smaller; i++) {
+    if ((x / i) % 1 == 0 && (y / i) % 1 == 0) {
+      result = i;
+    }
+  }
+
+  return result;
+}
+
+// console.log(divisortron(81, 9));
