@@ -137,6 +137,7 @@ th {
   background-color: darkred;
   color: #fff;
   min-width: 120px;
+  padding: 5px 0;
 }
 
 img {
@@ -148,7 +149,7 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: lightgray;
+  background-color: rgb(230, 230, 230);
 }
 
 tr:hover {
