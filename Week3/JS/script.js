@@ -445,3 +445,75 @@ function divisortron(x, y) {
 }
 
 // console.log(divisortron(81, 9));
+
+// #2-4
+
+let arr7 = [13, 11, 15, 5, 6, 1, 8, 12];
+
+function isOrdered(input) {
+  result = true;
+  input.forEach((el, i, arr) => {
+    if (arr[i] > arr[i + 1] && arr[i + 1] !== undefined) {
+      result = false;
+    }
+  });
+  // console.log(`${input} got ${result}`);
+  return result;
+}
+
+function swap(arr, i) {
+  // console.log(`Pre-swap - ${arr[i]} and ${arr[i + 1]}`);
+  let temp = arr[i];
+  arr[i] = arr[i + 1];
+  arr[i + 1] = temp;
+  // console.log(`Post-swap - ${arr[i]} and ${arr[i + 1]}`);
+}
+
+function swapper(input) {
+  // console.log(`swapper input = ${input}`);
+  input.forEach((el, i, arr) => {
+    if (arr[i] > arr[i + 1] && arr[i + 1] != undefined) {
+      swap(arr, i);
+    }
+  });
+  return input;
+}
+
+function sorter(arr) {
+  while (isOrdered(arr) == false) {
+    swapper(arr);
+  }
+  return arr;
+}
+
+function doubler(arr) {
+  arr.forEach((el, i, arr) => {
+    arr[i] *= 2;
+  });
+  return arr;
+}
+
+function doubleSwap(arr) {
+  return doubler(sorter(arr));
+}
+
+// console.log(doubleSwap(arr7));
+
+// #2-5
+
+let arr8 = [13, 11, 15, 5, 6, 1, 8, 12];
+
+function reverseArray(arr) {
+  for (let i = 0; i < arr.length / 2; i++) {
+    let temp = arr[i];
+    arr[i] = arr[arr.length - i - 1];
+    arr[arr.length - i - 1] = temp;
+  }
+  return arr;
+}
+
+function reverseOrder(arr) {
+  return reverseArray(sorter(arr));
+}
+
+// console.log(`${reverseOrder(arr8)}`);
