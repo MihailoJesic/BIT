@@ -1,0 +1,263 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html * {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 1000;
+  height: 8vh;
+}
+
+header > svg {
+  fill: dodgerblue;
+  stroke: dodgerblue;
+  display: block;
+  width: 24px;
+  margin: 5px auto;
+}
+
+.sidebar {
+  display: inline-block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 15px;
+  width: 25%;
+  height: 100%;
+  background-color: dodgerblue;
+}
+
+.sidebar > * {
+  color: #fff;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 40px 0;
+}
+
+.option {
+  display: block;
+}
+
+select {
+  display: block;
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+}
+
+.btn-search {
+  width: 80%;
+  display: block;
+  margin: 40px auto;
+  background-color: #fff;
+  color: darkslategray;
+  border-radius: 15px;
+  padding: 5px 0;
+}
+
+.btn {
+  text-align: center;
+  text-decoration: none;
+}
+
+.view {
+  background-image: url(https://media.istockphoto.com/vectors/city-street-map-vector-id1095421732);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 75%;
+  height: 92vh;
+  overflow: scroll;
+}
+
+.item {
+  margin: 20px 60px;
+  padding: 15px;
+  background-color: #fff;
+  position: relative;
+}
+
+h3 {
+  color: cadetblue;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+h4 {
+  color: gray;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.item > p {
+  color: gray;
+}
+
+.btn-float {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.btn-house {
+  background-color: red;
+  color: #fff;
+}
+
+.icon {
+  width: 24px;
+  margin: 0 5px;
+  color: grey;
+}
+
+.btn-bottom {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 10px;
+  color: grey;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
