@@ -147,7 +147,8 @@ header > svg {
   margin: 5px auto;
 }
 
-.sidebar {
+aside {
+  color: #fff;
   display: inline-block;
   position: fixed;
   left: 0;
@@ -197,7 +198,7 @@ select {
   text-decoration: none;
 }
 
-.view {
+main {
   background-image: url(https://media.istockphoto.com/vectors/city-street-map-vector-id1095421732);
   position: absolute;
   right: 0;
@@ -207,11 +208,12 @@ select {
   overflow: scroll;
 }
 
-.item {
+article {
   margin: 20px 60px;
   padding: 15px;
   background-color: #fff;
   position: relative;
+  color: gray;
 }
 
 h3 {
