@@ -136,7 +136,7 @@ header {
   background-color: #fff;
   box-sizing: border-box;
   z-index: 1000;
-  height: 8vh;
+  height: 32px;
 }
 
 header > svg {
@@ -157,10 +157,6 @@ aside {
   width: 25%;
   height: 100%;
   background-color: dodgerblue;
-}
-
-.sidebar > * {
-  color: #fff;
 }
 
 h2 {
@@ -213,7 +209,6 @@ article {
   padding: 15px;
   background-color: #fff;
   position: relative;
-  color: gray;
 }
 
 h3 {
@@ -229,7 +224,7 @@ h4 {
   margin-bottom: 20px;
 }
 
-.item > p {
+article > p {
   color: gray;
 }
 
@@ -262,4 +257,85 @@ h4 {
 .bottom-container {
   display: flex;
   flex-direction: row-reverse;
+}
+
+/* Tablem */
+
+@media only screen and (max-width: 992px) and (min-width: 576px) {
+  body {
+    overflow: hidden;
+  }
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+  }
+
+  header {
+    position: static;
+    display: flex;
+    align-items: center;
+  }
+
+  aside {
+    position: relative;
+    display: inline-block;
+    height: 100vh;
+    margin-right: 0;
+  }
+
+  aside > h2 {
+    width: 80%;
+  }
+
+  @media only screen and (max-height: 450px) {
+    aside {
+      overflow: scroll;
+    }
+  }
+
+  aside > h2 {
+    margin-top: 0;
+  }
+
+  aside > .btn-search {
+    margin-bottom: 0;
+  }
+
+  main {
+    position: relative;
+    display: inline-block;
+    width: 74%;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 576px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    position: static;
+    display: flex;
+    align-items: center;
+  }
+
+  aside {
+    position: static;
+    width: 100%;
+    display: block;
+  }
+
+  main {
+    position: static;
+    width: 100%;
+    display: block;
+    height: 100%;
+  }
 }
