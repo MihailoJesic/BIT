@@ -195,9 +195,9 @@ article {
 /* Tablet */
 
 @media only screen and (max-width: 992px) and (min-width: 576px) {
-  body {
-    /* background-color: teal; */
-  }
+  /* body {
+    background-color: teal;
+  } */
 
   .container {
     width: 95%;
@@ -229,9 +229,9 @@ article {
 /* Mobile */
 
 @media only screen and (max-width: 576px) {
-  body {
-    /* background-color: forestgreen; */
-  }
+  /* body {
+    background-color: forestgreen;
+  } */
 
   .container {
     width: 95%;
