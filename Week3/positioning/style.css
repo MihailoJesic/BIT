@@ -259,7 +259,7 @@ article > p {
   flex-direction: row-reverse;
 }
 
-/* Tablem */
+/* Tablet */
 
 @media only screen and (max-width: 992px) and (min-width: 576px) {
   body {

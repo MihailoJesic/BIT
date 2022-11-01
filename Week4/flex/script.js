@@ -138,3 +138,53 @@ function subseter(arr1, arr2) {
 }
 
 // console.log(subseter(arr4, arr3));
+
+// #8
+
+let arr5 = [`apple`, `tea`, `amazing`, `morning`, `JavaScript`];
+
+function numOfLetter(string, letter) {
+  let target = letter.toLowerCase();
+  let count = 0;
+  let arr = Array.from(string.toLowerCase());
+  arr.forEach((el) => {
+    if (target == el) {
+      count++;
+    }
+  });
+  return count;
+}
+
+function orderByLetter(arr, letter = `a`) {
+  arr.sort((a, b) => {
+    return numOfLetter(a, letter) - numOfLetter(b, letter);
+  });
+  return arr;
+}
+
+// console.log(orderByLetter(arr5));
+
+// #11
+
+let arr6 = [78, 111, 4, 4321];
+
+function pad(string, letter = ` `, padTo = 20) {
+  let result = `` + string;
+  let l = result.length;
+
+  for (let i = 0; i < padTo - l; i++) {
+    result = letter + result;
+  }
+
+  return result;
+}
+
+function padArray(arr) {
+  let result = ``;
+  arr.forEach((el) => {
+    result += pad(el) + `\n`;
+  });
+  return result;
+}
+
+// console.log(padArray(arr6));
