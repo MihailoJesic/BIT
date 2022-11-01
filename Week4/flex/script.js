@@ -92,3 +92,55 @@ function doubleSpan(arr, min, max) {
 }
 
 // console.log(doubleSpan(arr2, 2, 6));
+
+// #7
+
+let arr3 = [3, 4, 1, 3];
+let arr4 = [8, 9, 3, 1, 11, 4, 3];
+
+function counter(arr) {
+  let result = [];
+  result.push([arr[0], 0]);
+
+  arr.forEach((el) => {
+    if (
+      result.filter((item) => {
+        return el == item[0];
+      }).length
+    ) {
+      for (let i = 0; i < result.length; i++) {
+        if (el == result[i][0]) {
+          result[i][1]++;
+        }
+      }
+    } else {
+      result.push([el, 1]);
+    }
+  });
+
+  return result;
+}
+
+// function subseter(arr1, arr2) {
+//   let set = counter(arr1);
+//   let subset = counter(arr2);
+//   result = true;
+
+//   subset.forEach((el) => {
+//     if (
+//       set.filter((item) => {
+//         if (item[0] == el[0] && item[1] >= el[1]) {
+//           return true
+//         } else {
+//           return false;
+//         }
+//       }).length
+//     ) {
+//       result = false;
+//     }
+//   });
+
+//   return result;
+// }
+
+console.log(subseter(arr4, arr3));

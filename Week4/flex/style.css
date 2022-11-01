@@ -122,3 +122,26 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.box {
+  background-color: chartreuse;
+  border: 5px solid darkred;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  height: 100px;
+  width: 100px;
+  background-color: dodgerblue;
+  border: 5px solid darkslategray;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+}
