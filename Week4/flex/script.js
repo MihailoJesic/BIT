@@ -188,3 +188,118 @@ function padArray(arr) {
 }
 
 // console.log(padArray(arr6));
+
+// New Group
+
+// 1. zadatak "Given a square matrix, rotate the matrix by 90 degrees in a clockwise direction."
+
+// input: a = [[1,2,3,4],
+//             [5,6,7,8],
+//             [9,10,11,12],
+//             [13,14,15,16]]
+
+// output: [[13,9,5,1],
+//         [14,10,6,2],
+//         [15,11,7,3],
+//         [16,12,8,4]];
+
+let a = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
+];
+
+function rotateArray(arr) {}
+
+// console.log(rotateArray(a));
+
+// 2. zadatak "Given an M × N binary matrix, replace all occurrences of 0’s by 1’s,
+// which are not completely surrounded by 1’s from all sides
+// (top, left, bottom, right, top-left, top-right, bottom-left, and bottom-right)."
+
+// input: a =  [[ 1,  1,  1,  1,  0,  0,  1,  1,  0,  1  ],
+//             [  1,  0,  0,  1,  1,  0,  1,  1,  1,  1  ],
+//             [  1,  0,  0,  1,  1,  1,  1,  1,  1,  1  ],
+//             [  1,  1,  1,  1,  0,  0,  1,  1,  0,  1  ],
+//             [  1,  1,  1,  1,  0,  0,  0,  1,  0,  1  ],
+//             [  1,  1,  0,  1,  1,  0,  1,  1,  0,  0  ],
+//             [  1,  1,  0,  1,  1,  1,  1,  1,  1,  1  ],
+//             [  1,  1,  0,  1,  1,  0,  0,  1,  0,  1  ],
+//             [  1,  1,  1,  0,  1,  0,  1,  0,  0,  1  ],
+//             [  1,  1,  1,  0,  1,  1,  1,  1,  1,  1  ]]
+
+// output: [[  1,  1,  1,  1,  1,  1,  1,  1,  1,  1  ],
+//          [  1,  0,  0,  1,  1,  1,  1,  1,  1,  1  ],
+//          [  1,  0,  0,  1,  1,  1,  1,  1,  1,  1  ],
+//          [  1,  1,  1,  1,  0,  0,  1,  1,  1,  1  ],
+//          [  1,  1,  1,  1,  0,  0,  0,  1,  1,  1  ],
+//          [  1,  1,  1,  1,  1,  0,  1,  1,  1,  1  ],
+//          [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1  ],
+//          [  1,  1,  1,  1,  1,  0,  0,  1,  0,  1  ],
+//          [  1,  1,  1,  1,  1,  0,  1,  0,  0,  1  ],
+//          [  1,  1,  1,  1,  1,  1,  1,  1,  1,  1  ]]
+
+// 3. zadatak "Given a square matrix, rotate the matrix by 180 degrees in a clockwise direction."
+
+// input: a = [[1,2,3,4],
+//             [5,6,7,8],
+//             [9,10,11,12],
+//             [13,14,15,16]]
+
+// output: [[16,15,14,13],
+//          [12,11,10,9],
+//          [8,7,6,5],
+//          [4,3,2,1]]
+
+// 4. zadatak "Given an M × N integer matrix, print all its diagonal elements having a positive slope."
+
+// var a = [[1,2,3,4,5],
+//          [2,3,4,5,6],
+//          [3,4,5,6,7],
+//          [4,5,6,7,8],
+//          [5,6,7,8,9]]
+
+// output:
+// 1
+// 2 2
+// 3 3 3
+// 4 4 4 4
+// 5 5 5 5 5
+// 6 6 6 6
+// 7 7 7
+// 8 8
+// 9
+
+// 5. zadatak "Given an integer array containing M × N elements, construct an M × N matrix from it in spiral order."
+
+// Input: var a = [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25]
+
+// output:
+// [[ 1,  2,   3,  4,  5 ],
+//  [16,  17,  18,  19,  6 ],
+//  [15,  24,  25,  20,  7 ],
+//  [14,  23,  22,  21,  8 ],
+//  [13,  12,  11,  10,  9 ]]
+
+// 6. zadatak "Print the pattern."
+
+// input: 5
+
+// output:
+//     *
+//    * *
+//   *   *
+//  *     *
+// *********
+
+// 7. zadatak "Print the pattern."
+
+// input: 5
+
+// output:
+// * * * * *
+//       *
+//     *
+//   *
+// *
