@@ -136,7 +136,7 @@ body {
 }
 
 .container-main {
-  width: 50%;
+  width: 32rem;
   display: flex;
   flex-direction: column;
 }
@@ -154,8 +154,7 @@ header {
 main {
   background-color: #3cb371;
   box-shadow: 0 5px 0px 1px #2f8d59;
-
-  width: 70%;
+  width: 65%;
   display: flex;
   flex-direction: column;
 }
@@ -164,7 +163,8 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  justify-content: flex-start;
 }
 
 .item {
@@ -175,7 +175,6 @@ main {
 aside {
   background-color: #ff6347;
   box-shadow: 0 5px 0px 1px #e02200;
-
   width: 20%;
 }
 
