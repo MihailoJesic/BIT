@@ -172,7 +172,7 @@ nav > a {
 }
 
 .hero-img {
-  background-image: url(./assets/images/banner3.jpg);
+  background-image: url(https://static01.nyt.com/images/2016/02/07/travel/07TOKYO4/07TOKYO4-superJumbo.jpg?quality=75&auto=webp);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -281,6 +281,8 @@ h3 {
 
 .profile img {
   height: 3rem;
+  width: 3rem;
+  object-fit: cover;
   border: 0.1rem solid #fff;
   border-radius: 5rem;
   padding: 0.1rem;
