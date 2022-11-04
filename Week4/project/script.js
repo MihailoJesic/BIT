@@ -25,82 +25,87 @@ function Mathotron(a, b, c) {
   this.b = b;
   this.c = c;
 
-  function sum() {
+  this.sum = function () {
     return this.a + this.b + this.c;
-  }
+  };
 
-  function mul() {
+  this.mul = function () {
     return this.a * this.b * this.c;
-  }
+  };
 
-  function div() {
+  this.div = function () {
     return this.a / this.b / this.c;
-  }
+  };
 
-  function sub() {
+  this.sub = function () {
     return this.a - this.b - this.c;
-  }
+  };
 
-  function sqrt() {
+  this.sqrt = function () {
     return Math.sqrt(this.a);
-  }
+  };
 
-  function pow() {
+  this.pow = function () {
     return this.a ** this.b;
-  }
+  };
 
-  function changeA(num) {
+  this.changeA = function (num) {
     this.a = num;
-  }
+  };
 
-  function changeB(num) {
+  this.changeB = function (num) {
     this.a = num;
-  }
+  };
 
-  function changeC(num) {
+  this.changeC = function (num) {
     this.a = num;
-  }
+  };
 
-  function quadraticFormula() {
-    return sqrt(this.a ** 2 + this.b ** 2);
-  }
+  this.quadraticFormula = function () {
+    return this.sqrt(this.a ** 2 + this.b ** 2);
+  };
 
-  function makeArray() {
+  this.makeArray = function () {
     return Array.from(arguments);
-  }
+  };
 
-  function isEven() {
+  this.isEven = function () {
     if (this.a % 2 == 0 && this.b % 2 == 0 && this.c % 2 == 0) {
       return true;
     } else {
       return false;
     }
-  }
+  };
 
-  function isPrime(num) {
+  this.isPrime = function (num) {
     for (let i = 2, s = Math.sqrt(num); i <= s; i++)
       if (num % i === 0) return false;
     return num > 1;
-  }
+  };
 
-  function convertToString() {
+  this.convertToString = function () {
     return `${this.a} + ${this.b} + ${this.c}`;
-  }
+  };
 
-  function sumAndMultiply() {
-    return sum() * 123;
-  }
+  this.sumAndMultiply = function () {
+    return this.sum() * 123;
+  };
 
-  function reverseTheNumber() {
-    let string = `${sumAndMultiply()}`;
+  this.reverseTheNumber = function () {
+    let string = `${this.sumAndMultiply()}`;
     let result = ``;
     for (let i = string.length; i > 0; i--) {
       result += string[i - 1];
     }
     return result;
-  }
+  };
 
-  function newProperty(d) {
+  this.newProperty = function (d) {
     this.d = d;
-  }
+  };
 }
+
+let thing = new Mathotron(2, 3, 4);
+
+// console.log(thing);
+// console.log(thing.sumAndMultiply());
