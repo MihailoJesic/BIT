@@ -1,0 +1,44 @@
+@import "_reset";
+
+@mixin padMarRad($border) {
+  margin: $border;
+  padding: $border;
+  border-radius: $border;
+}
+
+$primary: orange;
+$secondary: green;
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  background-color: cornflowerblue;
+  width: 100%;
+  display: flex;
+  justify-items: space-between;
+}
+
+div {
+  background-color: firebrick;
+  @include padMarRad(1rem);
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+
+  p {
+    display: inline-block;
+    a {
+      color: $primary;
+      font-size: 52px;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
