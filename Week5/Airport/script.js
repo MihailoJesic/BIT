@@ -13,7 +13,7 @@
 
   function Seat(num, cat) {
     if (num == undefined) {
-      num = Math.round(Math.random() * 100);
+      num = Math.ceil(Math.random() * 100);
     }
     this.number = num;
     this.category = cat;
