@@ -18,3 +18,32 @@ let birthDate = new Date(...bday);
 
 console.log(birthDate);
 console.log(birthDate.toDateString());
+
+class Person {
+  constructor(name, surname, age) {
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+  }
+
+  hi() {
+    console.log(`Hi, I'm ${this.name} ${this.surname}`);
+  }
+}
+
+class Student extends Person {
+  constructor(name, surname, age, subject) {
+    super(name, surname, age);
+
+    this.subject = subject;
+  }
+
+  study() {
+    console.log(`I study ${this.subject}`);
+  }
+}
+
+let silky = new Student(`Silky`, `Witch`, 32, `owls`);
+
+silky.hi();
+silky.study();
