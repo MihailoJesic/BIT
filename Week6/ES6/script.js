@@ -10,14 +10,14 @@ function logger({ name, surname, age }) {
   console.log(name, surname, age);
 }
 
-logger(me);
+// logger(me);
 
 let bday = [1991, 6, 6];
 
 let birthDate = new Date(...bday);
 
-console.log(birthDate);
-console.log(birthDate.toDateString());
+// console.log(birthDate);
+// console.log(birthDate.toDateString());
 
 class Person {
   constructor(name, surname, age) {
@@ -27,7 +27,7 @@ class Person {
   }
 
   hi() {
-    console.log(`Hi, I'm ${this.name} ${this.surname}`);
+    return `Hi, I'm ${this.name} ${this.surname}`;
   }
 }
 
@@ -39,14 +39,14 @@ class Student extends Person {
   }
 
   study() {
-    console.log(`I study ${this.subject}`);
+    return super.hi() + `, I study ${this.subject}`;
   }
 }
 
 let silky = new Student(`Silky`, `Witch`, 32, `owls`);
 
-silky.hi();
-silky.study();
+console.log(silky.hi());
+console.log(silky.study());
 
 let cube = {
   name: `The Cube`,
@@ -57,12 +57,12 @@ let cube = {
   },
 };
 
-console.log(cube.arrow());
-console.log(cube.func());
+// console.log(cube.arrow());
+// console.log(cube.func());
 
 function iShouldBeUndefined() {
   "use strict";
   console.log(this);
 }
 
-iShouldBeUndefined();
+// iShouldBeUndefined();
