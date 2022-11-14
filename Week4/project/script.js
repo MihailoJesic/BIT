@@ -1,4 +1,4 @@
-`use strict`;
+"use strict";
 
 // 1. Create a constructor function ModernCalculator that creates objects with 17 methods, and takes 3 numbers as parameters
 

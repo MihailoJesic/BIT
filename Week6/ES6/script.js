@@ -1,4 +1,4 @@
-`use strict`;
+"use strict";
 
 let me = {
   name: `Mihailo`,
@@ -47,3 +47,22 @@ let silky = new Student(`Silky`, `Witch`, 32, `owls`);
 
 silky.hi();
 silky.study();
+
+let cube = {
+  name: `The Cube`,
+  arrow: () => this,
+  func: function () {
+    let circle = `The Circle`;
+    return this;
+  },
+};
+
+console.log(cube.arrow());
+console.log(cube.func());
+
+function iShouldBeUndefined() {
+  "use strict";
+  console.log(this);
+}
+
+iShouldBeUndefined();

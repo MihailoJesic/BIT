@@ -1,4 +1,4 @@
-`use strict`;
+"use strict";
 
 let modalBG = document.querySelector(`.modal-bg`);
 let openBtn = document.querySelector(`.btn-modal`);

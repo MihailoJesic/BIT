@@ -1,4 +1,4 @@
-`use strict`;
+"use strict";
 
 // Geolocation
 // window.navigator.geolocation.getCurrentPosition(function (pos) {
