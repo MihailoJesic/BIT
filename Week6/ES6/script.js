@@ -45,8 +45,8 @@ class Student extends Person {
 
 let silky = new Student(`Silky`, `Witch`, 32, `owls`);
 
-console.log(silky.hi());
-console.log(silky.study());
+// console.log(silky.hi());
+// console.log(silky.study());
 
 let cube = {
   name: `The Cube`,
@@ -66,3 +66,13 @@ function iShouldBeUndefined() {
 }
 
 // iShouldBeUndefined();
+
+const btn = document.querySelector(`.btn`);
+const bg = document.querySelector(`div`);
+
+console.log(btn);
+console.log(bg);
+
+btn.addEventListener(`click`, () => {
+  bg.classList.toggle(`background-color`);
+});
