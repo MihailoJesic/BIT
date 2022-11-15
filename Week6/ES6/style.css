@@ -131,29 +131,75 @@ table {
 
 html,
 body {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
-div {
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.background {
   background-color: darkgreen;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
 }
 
 .background-color {
   background-color: darkcyan;
 }
 
-a {
+.btn {
   display: inline-block;
   background-color: red;
   color: #fff;
   padding: 1rem 4rem;
   border-radius: 0.5rem;
-  margin: 10rem;
+  margin: 1rem;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.btn-chat {
+  width: 5rem;
+  margin: auto;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  width: 60%;
+  margin: auto;
+}
+
+.chat-box {
+  width: 60%;
+  height: 10rem;
+  background-color: aliceblue;
+  border: 0.1rem solid lightgrey;
+  margin: auto;
+  margin: 1rem auto;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.chat-imp {
+  width: 60%;
+  margin: auto;
+  margin: 0.2rem auto;
+  padding: 0.2rem 1rem;
+}
+
+.chat-box > p {
+  margin: 0.1rem;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

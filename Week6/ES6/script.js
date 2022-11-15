@@ -67,12 +67,33 @@ function iShouldBeUndefined() {
 
 // iShouldBeUndefined();
 
-const btn = document.querySelector(`.btn`);
-const bg = document.querySelector(`div`);
+const btn = document.querySelector(`.btn-color`);
+const tog = document.querySelector(`.btn-toggle`);
+const bg = document.querySelector(`.background`);
+const imp = document.querySelector(`.chat-imp`);
+const box = document.querySelector(`.chat-box`);
+const btnChat = document.querySelector(`.btn-chat`);
 
-console.log(btn);
-console.log(bg);
+console.log(imp);
+console.log(box);
+console.log(btnChat);
+
+let toggleDisabled = false;
 
 btn.addEventListener(`click`, () => {
-  bg.classList.toggle(`background-color`);
+  if (!toggleDisabled) {
+    bg.classList.toggle(`background-color`);
+  }
+});
+
+tog.addEventListener(`click`, () => {
+  toggleDisabled = !toggleDisabled;
+});
+
+btnChat.addEventListener(`click`, () => {
+  box.innerHTML += `<p>${imp.value}</p>`;
+  if (imp.value == ``) {
+    box.innerHTML += `<br>`;
+  }
+  imp.value = ``;
 });
