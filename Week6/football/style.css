@@ -133,76 +133,38 @@ html,
 body {
   height: 100vh;
   width: 100%;
+  background-color: aqua;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.background {
-  background-color: darkgreen;
+main {
+  background-image: url(https://img.freepik.com/premium-photo/football-field-soccer-field-background-green-lawn-court-create-game_64749-2034.jpg?w=826);
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
-.background-color {
-  background-color: darkcyan;
+svg {
+  height: 5rem;
+  position: relative;
+}
+
+.clicked {
+  transform: translate(-50%, -50%);
 }
 
 .btn {
-  display: inline-block;
-  background-color: red;
   color: #fff;
-  padding: 1rem 4rem;
-  border-radius: 0.5rem;
-  margin: 1rem;
+  background-color: darkred;
+  display: block;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem 2rem;
+  font-size: 32px;
   text-transform: uppercase;
   text-decoration: none;
-}
-
-.btn-chat {
-  width: 5rem;
-  margin: auto;
-}
-
-.chat-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  width: 60%;
-  margin: auto;
-}
-
-.chat-box {
-  width: 60%;
-  height: 10rem;
-  background-color: aliceblue;
-  border: 0.1rem solid lightgrey;
-  margin: auto;
-  margin: 1rem auto;
-  padding: 1rem;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-}
-
-.chat-imp {
-  width: 60%;
-  margin: auto;
-  margin: 0.2rem auto;
-  padding: 0.2rem 1rem;
-}
-
-.chat-box > p {
-  display: inline-block;
-  margin: 0.2rem;
-  text-align: left;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }/*# sourceMappingURL=style.css.map */

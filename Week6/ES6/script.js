@@ -91,9 +91,9 @@ tog.addEventListener(`click`, () => {
 });
 
 btnChat.addEventListener(`click`, () => {
-  box.innerHTML += `<p>${imp.value}</p>`;
-  if (imp.value == ``) {
-    box.innerHTML += `<br>`;
-  }
+  box.innerHTML += `<p>You: ${imp.value}</p>`;
+  // if (imp.value == ``) {
+  //   box.innerHTML += `<br>`;
+  // }
   imp.value = ``;
 });

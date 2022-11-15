@@ -61,6 +61,8 @@ body {
   margin: 1rem auto;
   padding: 1rem;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat-imp {
@@ -71,6 +73,7 @@ body {
 }
 
 .chat-box > p {
-  margin: 0.1rem;
+  display: inline-block;
+  margin: 0.2rem;
   text-align: left;
 }
