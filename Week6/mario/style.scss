@@ -1,0 +1,33 @@
+@import "_reset";
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.background {
+  height: 100vh;
+  background-image: url(https://nesmaps.com/maps/SuperMarioBrothers/images/SMB1-1BG.png);
+  width: 100%;
+  background-repeat: repeat-x;
+  background-size: contain;
+
+  // background-attachment: fixed;
+  // background-position: 0px 0px;
+
+  // height: 100%;
+  // background-position: center;
+  overflow: hidden;
+}
+
+.mario {
+  background-image: url(./assets/Untitled-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10vh;
+  width: 10vh;
+  position: absolute;
+  bottom: 13vh;
+  left: 40%;
+}
