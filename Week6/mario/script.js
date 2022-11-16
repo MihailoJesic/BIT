@@ -4,6 +4,10 @@ const mario = document.querySelector(`.mario`);
 const body = document.querySelector(`body`);
 const bg = document.querySelector(`.background`);
 
+const boing = new Audio(
+  `https://notification-sounds.com/soundsfiles/Mario-jump-sound.mp3`
+);
+
 let walking = false;
 let firstWalkFrame = false;
 let screen = 0;
@@ -67,6 +71,7 @@ body.addEventListener(`keydown`, (e) => {
   let key = e.key;
 
   if (key == `ArrowUp` && !jumpTimer && !falltimer) {
+    boing.play();
     jumpTimer = setInterval(() => {
       console.log(jump, groundLevel);
       if (jump > jumpMax) {
