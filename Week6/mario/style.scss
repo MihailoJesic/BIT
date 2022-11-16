@@ -31,3 +31,11 @@ body {
   bottom: 13vh;
   left: 40%;
 }
+
+.reverse {
+  transform: scaleX(-1);
+}
+
+.hidden {
+  visibility: hidden;
+}
