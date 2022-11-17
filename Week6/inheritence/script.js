@@ -100,3 +100,58 @@ let test = new MobileApp(`TestApp`, [`Andoid`, `Apple`], [`CC`], 4);
 // console.log(test.showStars());
 // console.log(test.like());
 // console.log(test.showStars());
+
+// https://app.getpostman.com/join-team?invite_code=7bb6ba8b90b19c744617ce9d89bc085f
+
+// let serbia = new XMLHttpRequest();
+// let countryName = `serbia`;
+// serbia.open(`GET`, `https://restcountries.com/v3.1/name/${countryName}`);
+// serbia.send();
+// serbia.addEventListener(`load`, () => {
+//   const [data] = JSON.parse(serbia.responseText);
+//   console.log(data);
+// });
+// console.log(serbia);
+
+// fetch(`https://restcountries.com/v3.1/name/serbia`)
+//   .then((res) => res.json())
+//   .then((data) => console.log(data[0]));
+
+// let roll = new Promise((resolve, reject) => {
+//   console.log(`Here comes the roll...`);
+//   setTimeout(() => {
+//     if (Math.random() > 0.5) {
+//       resolve(`Win 💚`);
+//     } else {
+//       reject(new Error(`Lose ❌`));
+//     }
+//   }, 2000);
+// });
+
+// roll.then((res) => console.log(res)).catch((err) => console.error(err));
+
+// function wait(sec) {
+//   return new Promise((resolve) => {
+//     setTimeout(resolve, sec * 1000);
+//   });
+// }
+
+// function write() {
+//   console.log(`Writing`);
+// }
+
+// wait(2)
+//   .then(() => {
+//     console.log(`1`);
+//     return wait(1);
+//   })
+//   .then(() => console.log(`2`));
+
+async function countryData(name) {
+  let data = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+  let [output] = await data.json();
+  console.log(output);
+}
+
+// countryData(`serbia`);
+// console.log(`1`);
