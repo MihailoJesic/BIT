@@ -154,7 +154,12 @@ a:hover {
   cursor: pointer;
 }
 
+div {
+  display: flex;
+  flex-direction: column;
+}
+
 img {
-  height: 100%;
   align-self: center;
+  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
