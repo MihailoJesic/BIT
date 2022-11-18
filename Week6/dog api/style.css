@@ -156,7 +156,10 @@ a:hover {
 
 div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  justify-content: space-around;
 }
 
 img {
