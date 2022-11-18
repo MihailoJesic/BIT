@@ -64,11 +64,7 @@ class App {
 class WebApp extends App {
   constructor(name, url, technologies, licence, stars) {
     super();
-    this.name = name;
-    this.url = url;
-    this.technologies = technologies;
-    this.licence = licence;
-    this.stars = stars;
+    [name, url, technologies, licence, stars] = this;
     this.getData = function () {
       return this.name, this.url, this.technologies, this.licence, this.stars;
     };
