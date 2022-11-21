@@ -1,0 +1,62 @@
+@import "_reset";
+
+html * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-bar {
+  width: 10rem;
+}
+
+.search-container {
+  width: 10rem;
+  border: 0.05rem solid lightgray;
+}
+
+.search-result {
+  border-top: 0.05rem solid lightgray;
+  border-bottom: 0.05rem solid lightgray;
+  z-index: 100;
+  &:hover {
+    background-color: powderblue !important;
+    cursor: pointer;
+  }
+}
+
+.search {
+  width: 10rem;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+article > img {
+  cursor: pointer;
+}
+
+a {
+  font-size: 80%;
+}
+
+h2 {
+  font-size: 120%;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+footer > div {
+  font-size: 60%;
+}
+
+.hidden {
+  display: none !important;
+}
