@@ -129,6 +129,10 @@ table {
   border-spacing: 0;
 }
 
+main {
+  min-height: 86vh !important;
+}
+
 html * {
   font-family: Arial, Helvetica, sans-serif;
 }

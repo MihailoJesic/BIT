@@ -11,8 +11,8 @@
   async function top50() {
     let request = await fetch(`https://api.tvmaze.com/shows`);
     let unpack = await request.json();
-    let top = unpack.sort((a, b) => a.rating.average < b.rating.average);
-    top.length = 51;
+    unpack.sort((a, b) => a.rating.average < b.rating.average);
+    unpack.length = 51;
     return unpack;
   }
 
@@ -39,10 +39,12 @@
 <article class="col-4 p-1" id="${item.id}">
   <img
   class="w-100"
-  src="${item.image?.medium}"
+  src="${
+    item.image?.medium ? item.image?.medium : `https://i.imgur.com/Z2MYNbj.png`
+  }"
   alt="${item.name}"
   />
-  <a href="" class="m-1"
+  <a href="#" class="m-1"
   >${item.name}</a
   >
 </article>
@@ -53,6 +55,7 @@
     container.innerHTML = ``;
     let arr = Array.from(json);
     // console.log(arr);
+    arr.sort((a, b) => a.rating.average < b.rating.average);
 
     arr.forEach(async (el) => {
       // console.log(el);
@@ -124,6 +127,9 @@
   container.addEventListener(`click`, (e) => {
     let id = e.target.closest(`article`).id;
     showDetails(id);
+    search.value = ``;
+    container.classList.remove(`hidden`);
+    details.classList.add(`hidden`);
   });
 
   logo.addEventListener(`click`, async (e) => {
@@ -131,9 +137,14 @@
     populate(await top);
     container.classList.remove(`hidden`);
     details.classList.add(`hidden`);
+    search.value = ``;
+    results.innerHTML = ``;
   });
 
   search.addEventListener(`input`, async (e) => {
+    container.classList.remove(`hidden`);
+    details.classList.add(`hidden`);
+
     let inp = e.target.value;
     let searchResults = await getSearch(inp);
 
@@ -161,11 +172,18 @@
     results.innerHTML = output;
 
     h1.innerHTML = `Results:`;
+    if (output == ``) {
+      h1.innerHTML = `No Results.`;
+    }
 
     // let flat;
     // (flat = output.join(`\n`)).then(() => {
     //   results.innerHTML = flat;
     // });
+  });
+
+  search.addEventListener(`focusout`, () => {
+    results.innerHTML = ``;
   });
 
   results.addEventListener(`click`, async (e) => {

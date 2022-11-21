@@ -1,5 +1,9 @@
 @import "_reset";
 
+main {
+  min-height: 86vh !important;
+}
+
 html * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -18,7 +22,7 @@ html * {
   border-bottom: 0.05rem solid lightgray;
   z-index: 100;
   &:hover {
-    background-color: powderblue !important;
+    background-color: powderblue !important ;
     cursor: pointer;
   }
 }
