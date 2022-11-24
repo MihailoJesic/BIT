@@ -1,18 +1,32 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import Sub from "./sub";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div className="container">
-          <h1>This is the App</h1>
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1>Spiiiiiiiin!</h1>
-        </div>
-      </header>
-    </div>
-  );
+class Title extends React.Component {
+  render() {
+    let name = `Mihailo`;
+    let surname = `Jesic`;
+    let now = new Date();
+    let year = now.getFullYear();
+    let yob = 1991;
+
+    let arr = [`One`, `Two`, `Three`, `Four`];
+
+    return (
+      <>
+        <h1>
+          {name} {surname}, age: {year - yob}
+        </h1>
+
+        <Sub text="9" />
+        <Sub text="8" />
+        <Sub text="7" />
+
+        {arr.map((el) => {
+          return <p>{el}</p>;
+        })}
+      </>
+    );
+  }
 }
 
-export default App;
+export default Title;
