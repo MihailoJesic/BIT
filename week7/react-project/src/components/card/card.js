@@ -3,7 +3,7 @@ import "./card.css";
 
 class Card extends React.Component {
   render() {
-    return <dib className="card">Card</dib>;
+    return <div className="card">Card #{this.props.val}</div>;
   }
 }
 

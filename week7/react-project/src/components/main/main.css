@@ -1,4 +1,4 @@
-main {
+div > main {
   background-color: darkslategray;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -10,4 +10,5 @@ main {
   height: 75%;
   box-sizing: border-box;
   flex-wrap: wrap;
+  padding: 1rem;
 }
