@@ -5,9 +5,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>This is the App</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Speeeeeen!</h1>
+        <div className="container">
+          <h1>This is the App</h1>
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>Spiiiiiiiin!</h1>
+        </div>
       </header>
     </div>
   );

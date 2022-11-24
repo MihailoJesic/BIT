@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 10s linear;
+    animation: App-logo-spin infinite 2s ease-in-out;
   }
 }
 
@@ -24,15 +24,23 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  height: 24rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @keyframes App-logo-spin {
-  from {
+  0% {
     transform: rotate(0deg);
+    height: 8rem;
   }
-  to {
+  50% {
+    height: 12rem;
+  }
+  100% {
     transform: rotate(360deg);
+    height: 8rem;
   }
 }
