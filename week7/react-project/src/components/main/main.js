@@ -11,6 +11,17 @@ class Main extends React.Component {
           <Card />
           <Card />
           <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </main>
       </>
     );
