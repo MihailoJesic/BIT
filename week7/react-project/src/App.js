@@ -4,12 +4,22 @@ import SinglePage from "./pages/singlepage/singlepage";
 import "./index.css";
 
 class App extends React.Component {
-  isOnHomePage = true;
+  constructor(props) {
+    super(props);
+
+    this.state = { isOnHomePage: true };
+  }
   render() {
     return (
       <>
-        {this.isOnHomePage && <HomePage />}
-        {!this.isOnHomePage && <SinglePage />}
+        <button
+          onClick={(e) => {
+            this.setState({ isOnHomePage: !this.state.isOnHomePage });
+          }}
+        >
+          Go to {this.state.isOnHomePage ? `Single Page` : `Home Page`}
+        </button>
+        {this.state.isOnHomePage ? <HomePage /> : <SinglePage />}
       </>
     );
   }

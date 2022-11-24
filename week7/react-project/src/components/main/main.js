@@ -7,8 +7,27 @@ class Main extends React.Component {
     super(props);
     this.state = {
       number: 1,
+      isFriday: true,
+      data: [],
     };
+
+    this.changeFriday = this.changeFriday.bind(this);
+    this.fetchData = this.fetchData.bind(this);
   }
+
+  changeFriday() {
+    this.setState({ isFriday: !this.state.isFriday });
+  }
+
+  fetchData() {
+    fetch(`https://637f92525b1cc8d6f949b90f.mockapi.io/entries`)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        this.setState({ data: res });
+      });
+  }
+
   arr = [1, 2, 3, 4, 5, 6, 7, 8];
 
   render() {
@@ -19,14 +38,36 @@ class Main extends React.Component {
           <button
             onClick={() => {
               this.setState({ number: this.state.number + 1 });
-              this.render();
             }}
           >
             Increase Number
           </button>
+          <button
+            onClick={() => {
+              this.changeFriday();
+              console.log(this.state.isFriday);
+            }}
+          >
+            It is {this.state.isFriday ? `` : `not `}Friday
+          </button>
+          <button
+            onClick={() => {
+              this.fetchData();
+            }}
+          >
+            Get Data
+          </button>
           <div>
-            {this.arr.map((el) => {
-              return <Card val={el} />;
+            {this.state.data.map((el, i) => {
+              return (
+                <Card
+                  img={el.avatar}
+                  key={i}
+                  id={el.id}
+                  name={el.name}
+                  date={el.createdAt}
+                />
+              );
             })}
           </div>
         </main>
