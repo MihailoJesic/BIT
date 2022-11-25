@@ -33,7 +33,7 @@ class Main extends React.Component {
     return (
       <>
         <main>
-          <h2>Number is {this.props.number}</h2>
+          <h2>The Number is {this.props.number}</h2>
           <div className="add-sub">
             <button
               onClick={() => {
