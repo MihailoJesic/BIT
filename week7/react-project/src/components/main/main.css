@@ -15,6 +15,13 @@ div > main {
   text-align: center;
 }
 
+.add-sub {
+  display: flex;
+  flex-direction: row;
+  width: 35rem;
+  margin: 0 auto;
+}
+
 .card-container {
   display: flex;
   flex-direction: row;

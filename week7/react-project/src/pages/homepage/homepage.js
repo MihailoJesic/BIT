@@ -10,7 +10,7 @@ class HomePage extends React.Component {
       <>
         <h1>Home Page</h1>
         <Header />
-        <Main />
+        <Main counter={this.props.counter} number={this.props.number} />
         <Footer />
       </>
     );

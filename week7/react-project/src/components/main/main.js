@@ -34,14 +34,23 @@ class Main extends React.Component {
     return (
       <>
         <main>
-          <h2>Number is {this.state.number}</h2>
-          <button
-            onClick={() => {
-              this.setState({ number: this.state.number + 1 });
-            }}
-          >
-            Increase Number
-          </button>
+          <h2>Number is {this.props.number}</h2>
+          <div className="add-sub">
+            <button
+              onClick={() => {
+                this.props.counter(`add`);
+              }}
+            >
+              Increase Number
+            </button>
+            <button
+              onClick={() => {
+                this.props.counter(`subtract`);
+              }}
+            >
+              Decrease Number
+            </button>
+          </div>
           <button
             onClick={() => {
               this.changeFriday();
