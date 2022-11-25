@@ -57,7 +57,7 @@ class Main extends React.Component {
           >
             Get Data
           </button>
-          <div>
+          <div className="card-container">
             {this.state.data.map((el, i) => {
               return (
                 <Card
