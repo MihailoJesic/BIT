@@ -6,7 +6,6 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: 1,
       isFriday: true,
       data: [],
     };
