@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "./card";
+import "./App.css";
 
 export class App extends Component {
   constructor(props) {
@@ -46,29 +47,41 @@ export class App extends Component {
     if (this.state.targetData === null) {
       return (
         <>
-          {this.state.data.map((el, i) => {
-            return (
-              <Card
-                name={el.name.common}
-                flag={el.flag}
-                code={el.cca3}
-                key={i}
-                setTarget={this.setTarget}
-              ></Card>
-            );
-          })}
+          {" "}
+          <main>
+            {this.state.data.map((el, i) => {
+              return (
+                <Card
+                  name={el.name.common}
+                  flag={el.flag}
+                  code={el.cca3}
+                  key={i}
+                  setTarget={this.setTarget}
+                ></Card>
+              );
+            })}
+          </main>
         </>
       );
     } else if (this.state.targetData !== null) {
       console.log(`HERE `, this.state.targetData);
       return (
         <>
-          <Card
-            name={this.state.targetData.name.common}
-            flag={this.state.targetData.flag}
-            code={this.state.targetData.cca3}
-            setTarget={this.back}
-          ></Card>
+          <main>
+            <article>
+              <Card
+                name={this.state.targetData.name.common}
+                flag={this.state.targetData.flag}
+                code={this.state.targetData.cca3}
+                setTarget={this.back}
+                capital={this.state.targetData.capital}
+                coatOfArms={this.state.targetData.coatOfArms.png}
+                population={this.state.targetData.population}
+                region={this.state.targetData.region}
+                subregion={this.state.targetData.subregion}
+              ></Card>
+            </article>
+          </main>
         </>
       );
     }
