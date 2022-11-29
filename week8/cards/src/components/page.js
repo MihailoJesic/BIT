@@ -25,6 +25,7 @@ export class Page extends Component {
               className="btn-back"
               onClick={() => {
                 this.props.setTarget(this.props.code);
+                window.scrollTo(0, 0);
               }}
             >
               Back

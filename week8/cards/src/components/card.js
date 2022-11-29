@@ -9,6 +9,7 @@ export class Card extends Component {
         className="card"
         onClick={() => {
           this.props.setTarget(this.props.code);
+          window.scrollTo(0, 0);
         }}
       >
         <img src={this.props.flag} alt="Flag" />
