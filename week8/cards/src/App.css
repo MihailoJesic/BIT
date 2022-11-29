@@ -15,4 +15,5 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 0.5rem;
 }
