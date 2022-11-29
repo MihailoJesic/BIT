@@ -6,39 +6,13 @@ body {
   min-height: 100vh;
 }
 
-.details {
-  display: none;
-}
-
-article > div > .details {
-  display: inline-block;
-}
-
-article > .card {
-  margin: 4rem 0;
+html * {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
-  background-color: black;
+  background-color: cadetblue;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.card {
-  background-color: darkslategrey;
-  color: #fff;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-  width: 10rem;
-  min-height: 3rem;
-  align-items: center;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.card img {
-  width: 100%;
-  margin-top: 1rem;
 }

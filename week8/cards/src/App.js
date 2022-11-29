@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Card from "./card";
+import Card from "./components/card";
+import Page from "./components/page";
 import "./App.css";
 
 export class App extends Component {
@@ -45,6 +46,7 @@ export class App extends Component {
 
   render() {
     if (this.state.targetData === null) {
+      console.log(`Card`);
       return (
         <>
           {" "}
@@ -53,7 +55,7 @@ export class App extends Component {
               return (
                 <Card
                   name={el.name.common}
-                  flag={el.flag}
+                  flag={el.flags.png}
                   code={el.cca3}
                   key={i}
                   setTarget={this.setTarget}
@@ -65,22 +67,21 @@ export class App extends Component {
       );
     } else if (this.state.targetData !== null) {
       console.log(`HERE `, this.state.targetData);
+      console.log(`Page`);
       return (
         <>
           <main>
-            <article>
-              <Card
-                name={this.state.targetData.name.common}
-                flag={this.state.targetData.flag}
-                code={this.state.targetData.cca3}
-                setTarget={this.back}
-                capital={this.state.targetData.capital}
-                coatOfArms={this.state.targetData.coatOfArms.png}
-                population={this.state.targetData.population}
-                region={this.state.targetData.region}
-                subregion={this.state.targetData.subregion}
-              ></Card>
-            </article>
+            <Page
+              name={this.state.targetData.name.common}
+              flag={this.state.targetData.flags.png}
+              code={this.state.targetData.cca3}
+              setTarget={this.back}
+              capital={this.state.targetData.capital}
+              coatOfArms={this.state.targetData.coatOfArms.png}
+              population={this.state.targetData.population}
+              region={this.state.targetData.region}
+              subregion={this.state.targetData.subregion}
+            ></Page>
           </main>
         </>
       );

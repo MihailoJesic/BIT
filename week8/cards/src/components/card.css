@@ -1,0 +1,25 @@
+.card {
+  background-color: white;
+  box-shadow: 0 0 0.5rem darkslategray;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  width: 10rem;
+  min-height: 3rem;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card img {
+  box-shadow: 0 0 0.2rem darkslategray;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card div {
+  margin-bottom: -0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}

@@ -1,0 +1,66 @@
+.page {
+  background-color: white;
+  box-shadow: 0 0 0.5rem darkslategray;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.page img {
+  box-shadow: 0 0 0.2rem darkslategray;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+h1 {
+  margin: 0.8rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+}
+
+.coa {
+  width: 40%;
+  margin: 0 1rem;
+}
+
+.coa div {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  margin: 2rem;
+}
+
+.btn-back {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem 4rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .page {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page {
+    width: 50%;
+  }
+}
