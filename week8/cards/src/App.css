@@ -4,6 +4,10 @@ html {
 
 body {
   min-height: 100vh;
+  background-image: url(https://images6.alphacoders.com/407/407406.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 html * {
@@ -11,7 +15,7 @@ html * {
 }
 
 main {
-  background-color: cadetblue;
+  /* background-color: beige; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

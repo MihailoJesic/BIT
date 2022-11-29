@@ -10,6 +10,7 @@
   text-align: center;
   vertical-align: middle;
   transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -28,4 +29,22 @@
   margin-bottom: -0.5rem;
   text-align: center;
   vertical-align: middle;
+}
+
+@media only screen and (min-width: 480px) {
+  .card {
+    width: 6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 8rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 10rem;
+  }
 }
