@@ -5,7 +5,7 @@ export class Page extends Component {
   render(props) {
     // console.log("Props: ", this.props);
     return (
-      <div className="page">
+      <article className="page">
         <img src={this.props.flag} alt="Flag" />
         <h1>{this.props.name}</h1>
         <div className="description">
@@ -21,6 +21,9 @@ export class Page extends Component {
             </div>
             <div>Continent: {this.props.region}</div>
             <div>Region: {this.props.subregion}</div>
+            <div>
+              Map: <a href={this.props.map}>{this.props.map}</a>
+            </div>
             <div
               className="btn-back"
               onClick={() => {
@@ -32,7 +35,7 @@ export class Page extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </article>
     );
   }
 }

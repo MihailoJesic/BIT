@@ -55,7 +55,7 @@ export class App extends Component {
               return (
                 <Card
                   name={el.name.common}
-                  flag={el.flags.png}
+                  flag={el.flags.svg}
                   code={el.cca3}
                   key={i}
                   setTarget={this.setTarget}
@@ -73,14 +73,15 @@ export class App extends Component {
           <main>
             <Page
               name={this.state.targetData.name.common}
-              flag={this.state.targetData.flags.png}
+              flag={this.state.targetData.flags.svg}
               code={this.state.targetData.cca3}
               setTarget={this.back}
               capital={this.state.targetData.capital}
-              coatOfArms={this.state.targetData.coatOfArms.png}
+              coatOfArms={this.state.targetData.coatOfArms.svg}
               population={this.state.targetData.population}
               region={this.state.targetData.region}
               subregion={this.state.targetData.subregion}
+              map={this.state.targetData.maps.googleMaps}
             ></Page>
           </main>
         </>
