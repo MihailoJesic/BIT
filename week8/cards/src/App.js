@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import Card from "./components/card";
+import Pagination from "./components/pagination";
 import Page from "./components/page";
 import "./App.css";
 
 export class App extends Component {
   constructor(props) {
-    super();
-    this.state = { data: [], target: ``, targetData: null };
+    super(props);
+    this.state = {
+      data: [],
+      target: ``,
+      targetData: null,
+      page: 1,
+      ITEMSPERPAGE: 15,
+    };
     this.setTarget = this.setTarget.bind(this);
     this.back = this.back.bind(this);
-    this.fetcCountry = this.fetcCountry.bind(this);
+    this.fetchCountry = this.fetchCountry.bind(this);
+    this.setPage = this.setPage.bind(this);
   }
 
   fetchData() {
@@ -17,23 +25,29 @@ export class App extends Component {
       .then((res) => res.json())
       .then((res) => {
         // console.log("asdas", res);
-        this.setState({ data: Array.from(res) });
-        // console.log("state.data :", this.state.data);
+        this.setState({ data: res, data: res });
+        // console.log("state.data :", this.state.data);[]
       });
   }
 
-  fetcCountry(code) {
+  fetchCountry(code) {
     fetch(`https://restcountries.com/v3.1/alpha/${code}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({ targetData: res[0] });
-        console.log("state.targetData :", this.state.targetData);
+        // console.log("state.targetData :", this.state.targetData);
       });
   }
 
   setTarget(target) {
     this.setState({ target: target });
-    this.fetcCountry(target);
+    this.fetchCountry(target);
+  }
+
+  setPage(num) {
+    this.setState({
+      data: num,
+    });
   }
 
   componentDidMount() {
@@ -46,28 +60,38 @@ export class App extends Component {
 
   render() {
     if (this.state.targetData === null) {
-      console.log(`Card`);
       return (
         <>
-          {" "}
           <main>
             {this.state.data.map((el, i) => {
-              return (
-                <Card
-                  name={el.name.common}
-                  flag={el.flags.svg}
-                  code={el.cca3}
-                  key={i}
-                  setTarget={this.setTarget}
-                ></Card>
-              );
+              let output;
+              if (
+                i >= this.state.ITEMSPERPAGE * (this.state.page - 1) &&
+                i < this.state.ITEMSPERPAGE * this.state.page
+              ) {
+                output = (
+                  <>
+                    <Card
+                      name={el.name.common}
+                      flag={el.flags.svg}
+                      code={el.cca3}
+                      key={50000 - i}
+                      setTarget={this.setTarget}
+                    ></Card>
+                  </>
+                );
+              }
+              return output;
             })}
           </main>
+          <Pagination
+            setPage={this.setPage}
+            page={this.state.page}
+            max={Math.ceil(this.state.data.length / this.state.ITEMSPERPAGE)}
+          ></Pagination>
         </>
       );
     } else if (this.state.targetData !== null) {
-      console.log(`HERE `, this.state.targetData);
-      console.log(`Page`);
       return (
         <>
           <main>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./page.css";
 
-export class Page extends Component {
+ class Page extends Component {
   render(props) {
     // console.log("Props: ", this.props);
     return (
