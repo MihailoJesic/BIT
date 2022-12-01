@@ -1,0 +1,37 @@
+article {
+  width: 32%;
+  margin: 0.5rem 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0.2rem 0.4rem 0.1rem darkslategray;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+article:hover {
+  transform: translate(0, -0.5rem);
+  box-shadow: 0 0.7rem 0.8rem 0.2rem darkslategray;
+}
+
+.card-img {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  background-color: dodgerblue;
+  color: #fff;
+  border-radius: 5rem;
+  padding: 0.8rem;
+  display: inline-block;
+  position: absolute;
+  right: 1rem;
+  top: 22.5rem;
+  box-shadow: 0 0 0.5rem 0.1rem #fff;
+}
+
+article > a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 0.8rem;
+}

@@ -1,0 +1,17 @@
+.home-section {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-section h1 {
+  text-align: center;
+}
+
+.show-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

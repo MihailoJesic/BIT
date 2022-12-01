@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import DetailsPage from "./pages/DetailsPage";
 import Footer from "./comps/Footer";
+import "./App.css";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(`home`);
@@ -11,14 +12,14 @@ const App = () => {
   const [listStyle, setListStyle] = useState("grid");
 
   useEffect(() => {
-    if (page === `home`) {
+    if (currentPage === `home`) {
       setPage(HomePage);
-    } else if (page === `details`) {
+    } else if (currentPage === `details`) {
       setPage(DetailsPage);
-    } else if (page === `about`) {
+    } else if (currentPage === `about`) {
       setPage(AboutPage);
     }
-  });
+  }, [currentPage]);
 
   return (
     <>

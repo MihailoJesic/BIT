@@ -1,11 +1,12 @@
 import React from "react";
+import "./Card.css";
 
 const Card = () => {
   return (
-    <article class="col-4 p-1">
+    <article className="col-4 p-1">
       <img
-        class="w-100"
-        src="https://preview.redd.it/fsnphj4ft33a1.png?width=670&format=png&auto=webp&s=c9a097d23d51a8543e2072f0d940df1cfa35cfe2"
+        className="w-100 card-img"
+        src="https://m.media-amazon.com/images/I/71BPuv+iRbL._AC_SL1000_.jpg"
         alt=""
       />
 

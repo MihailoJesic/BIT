@@ -1,0 +1,75 @@
+.details-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.details-title {
+  text-align: center;
+}
+
+.details-img {
+  width: 40%;
+  padding: 2rem 2rem 2rem 0;
+}
+
+.details-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.details-text {
+  box-sizing: border-box;
+  width: 60%;
+  display: inline-block;
+  padding: 2rem;
+}
+
+.details-title {
+  text-align: left;
+}
+
+.details-genre {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.details-genre > div {
+  background-color: lightgray;
+  color: darkslategrey;
+  box-shadow: 0.2rem 0.2rem 0.5rem -0.1rem darkslategray;
+  padding: 0.2rem 0.4rem;
+  margin: 0.5rem 0.5rem;
+  margin-left: 0;
+  display: inline-block;
+}
+
+.details-actors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.details-actor {
+  width: 15%;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem darkslategray;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.details-portrait {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.details-name {
+  color: #fff;
+  position: absolute;
+  bottom: 0.2rem;
+  margin: 0.8rem;
+  box-sizing: border-box;
+  text-shadow: 0.1rem 0.1rem darkslategray;
+  font-weight: 700;
+}
