@@ -79,3 +79,31 @@
   text-shadow: 0.1rem 0.1rem darkslategray;
   font-weight: 700;
 }
+
+.cast-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cast-display {
+  display: flex;
+}
+
+.on {
+  padding: 1rem 2rem;
+  background-color: dodgerblue;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem -0.1rem darkslategray;
+  cursor: pointer;
+}
+
+.off {
+  padding: 1rem 2rem;
+  background-color: paleturquoise;
+  color: gray;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}

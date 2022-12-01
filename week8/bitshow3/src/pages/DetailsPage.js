@@ -23,7 +23,27 @@ const DetailsPage = (props) => {
         </div>
       </div>
       <div className="details-cast">
-        <h3>Cast</h3>
+        <div className="cast-header">
+          <h3>Cast</h3>
+          <div className="cast-display">
+            <div
+              className={props.listStyle ? `off` : `on`}
+              onClick={() => {
+                props.setListStyle(!props.listStyle);
+              }}
+            >
+              Grid
+            </div>
+            <div
+              className={props.listStyle ? `on` : `off`}
+              onClick={() => {
+                props.setListStyle(!props.listStyle);
+              }}
+            >
+              List
+            </div>
+          </div>
+        </div>
         <div className="details-actors">
           {props.cast.map((el) => {
             return (

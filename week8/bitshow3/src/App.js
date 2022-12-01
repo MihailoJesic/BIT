@@ -15,7 +15,7 @@ const App = () => {
   const [showCast, setShowCast] = useState({});
   const [showDataLoaded, setShowDataLoaded] = useState(false);
   const [showCastLoaded, setShowCastLoaded] = useState({});
-  const [listStyle, setListStyle] = useState("grid");
+  const [listStyle, setListStyle] = useState(false);
   const [searchQueary, setSearchQueary] = useState("");
   const [searchResults, setSearchResults] = useState({});
   const [searchResultsLoaded, setSearchResultsLoaded] = useState(false);
@@ -32,14 +32,33 @@ const App = () => {
           setShow={setShow}
         ></HomePage>
       );
-    } else if (currentPage === `details` && showDataLoaded !== false) {
-      setPage(<DetailsPage data={showData} cast={showCast}></DetailsPage>);
+    } else if (
+      currentPage === `details` &&
+      showDataLoaded == true &&
+      showCastLoaded === true
+    ) {
+      setPage(
+        <DetailsPage
+          data={showData}
+          cast={showCast}
+          listSyle={listStyle}
+          setListStyle={setListStyle}
+        ></DetailsPage>
+      );
     } else if (currentPage === `about`) {
       setPage(<AboutPage></AboutPage>);
     } else {
       setPage(<Spinner></Spinner>);
     }
-  }, [currentPage, searchResults, showDataLoaded, searchResultsLoaded]);
+  }, [
+    currentPage,
+    searchResults,
+    showCast,
+    showData,
+    showDataLoaded,
+    showCastLoaded,
+    searchResultsLoaded,
+  ]);
 
   // TODO: Move the loader and Dependecy arr to a dedicated search function
   useEffect(() => {
