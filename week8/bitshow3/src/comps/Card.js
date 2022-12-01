@@ -1,21 +1,29 @@
 import React from "react";
 import "./Card.css";
 
-const Card = () => {
+const Card = (props) => {
+  if (!props.loaded) return;
+  let rate = props.item.rating.average >= 8.2 ? `well-rated` : ``;
+  let num =
+    props.item.rating.average == null ? `N/A` : props.item.rating.average;
   return (
-    <article className="col-4 p-1">
-      <img
-        className="w-100 card-img"
-        src="https://m.media-amazon.com/images/I/71BPuv+iRbL._AC_SL1000_.jpg"
-        alt=""
-      />
+    <article
+      className={rate}
+      onClick={() => {
+        props.setCurrentPage(`details`);
+        props.setShow(props.item.id);
+      }}
+    >
+      <div className="rating-relative" key={props.item.id}>
+        <img
+          className=" card-img"
+          src={props.item?.image?.medium}
+          alt={props.item.name}
+        />
+        <div className="rating">{num}</div>
+      </div>
 
-      <div className="rating">6.9</div>
-
-      <a href="">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, magni
-        nulla! Voluptas commodi rem incidunt!
-      </a>
+      <div className="card-title">{props.item.name}</div>
     </article>
   );
 };

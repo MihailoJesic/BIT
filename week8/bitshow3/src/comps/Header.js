@@ -1,19 +1,21 @@
 import React from "react";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <>
-      <header className="container-fluid bg-dark d-flex flex-row justify-content-center">
+      <header>
         <div className="header-container">
-          <nav className="container-fluid d-flex justify-content-between col-lg-8 col-md-12 col-sm-12">
-            <a
-              href="#"
-              className="logo mt-auto mb-auto text-white d-inline-block"
+          <nav>
+            <div onClick={() => props.setCurrentPage(`home`)} className="logo">
+              BitShow 2.0
+            </div>
+            <div
+              onClick={() => props.setCurrentPage(`about`)}
+              className="about"
             >
-              BitShow
-            </a>
-            <div className="about">About</div>
+              About
+            </div>
           </nav>
           <div className="search-bar position-relative m-1">
             <input

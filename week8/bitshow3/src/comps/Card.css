@@ -2,9 +2,9 @@ article {
   width: 32%;
   margin: 0.5rem 0;
   text-align: center;
-  position: relative;
   box-shadow: 0 0.2rem 0.4rem 0.1rem darkslategray;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.1s, transform 0.1s;
+  cursor: pointer;
 }
 
 article:hover {
@@ -15,6 +15,7 @@ article:hover {
 .card-img {
   width: 100%;
   margin-bottom: 0.5rem;
+  box-shadow: 0 0.1rem 0.2rem 0.05rem darkslategray;
 }
 
 .rating {
@@ -24,14 +25,32 @@ article:hover {
   padding: 0.8rem;
   display: inline-block;
   position: absolute;
-  right: 1rem;
-  top: 22.5rem;
-  box-shadow: 0 0 0.5rem 0.1rem #fff;
+  right: 5%;
+  bottom: 0rem;
+  box-shadow: 0 0 0.3rem 0.1rem lightgray;
+  font-weight: 700;
 }
 
-article > a {
+.rating-relative {
+  position: relative;
+}
+
+.card-title {
   display: inline-block;
   text-decoration: none;
   color: black;
   margin-bottom: 0.8rem;
+}
+
+.well-rated {
+  box-shadow: 0 0.2rem 0.4rem 0.1rem darkgoldenrod;
+  background-color: palegoldenrod;
+}
+
+.well-rated .card-img {
+  box-shadow: 0 0.1rem 0.5rem -0.1rem darkgoldenrod;
+}
+
+article:hover.well-rated {
+  box-shadow: 0 0.7rem 0.8rem 0.2rem darkgoldenrod;
 }

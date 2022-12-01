@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="container-fluid bg-dark text-white d-flex flex-row justify-content-center">
       <div className="m-2">
-        Copyright©{" "}
+        Copyright© BIT{" "}
         {now.toLocaleString("default", {
           month: "long",
         })}{" "}
