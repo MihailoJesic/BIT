@@ -3,7 +3,6 @@ import Card from "../comps/Card";
 import "./HomePage.css";
 
 const HomePage = (props) => {
-  console.log(props);
   return (
     <section className="home-section">
       <h1 className="">

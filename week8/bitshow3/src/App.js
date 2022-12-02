@@ -54,6 +54,7 @@ const App = () => {
   }, [
     currentPage,
     searchResults,
+    searchQueary,
     showCast,
     showData,
     showDataLoaded,
@@ -87,18 +88,15 @@ const App = () => {
     if (searchQueary === ``) return;
 
     setSearchResultsLoaded(false);
-    console.log(searchQueary);
 
     fetch(`https://api.tvmaze.com/search/shows?q=` + searchQueary)
       .then((res) => {
         return res.json();
       })
       .then((res) => {
-        console.log(res);
         let output = res.map((el) => {
           return el.show;
         });
-        console.log(output);
         setSearchResults(output);
         setSearchResultsLoaded(true);
       });
@@ -116,7 +114,6 @@ const App = () => {
         return res.json();
       })
       .then((res) => {
-        console.log(res);
         setShowData(res);
         setShowDataLoaded(true);
       });
@@ -126,7 +123,6 @@ const App = () => {
         return res.json();
       })
       .then((res) => {
-        console.log(res);
         setShowCast(res);
         setShowCastLoaded(true);
       });
@@ -142,10 +138,6 @@ const App = () => {
       setListStyle(true);
     }
   }, []);
-
-  useEffect(() => {
-    console.log(`Results: `, searchQueary);
-  }, [searchResults]);
 
   return (
     <>

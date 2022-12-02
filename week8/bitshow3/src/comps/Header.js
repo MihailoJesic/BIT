@@ -28,9 +28,9 @@ const Header = (props) => {
               About
             </div>
           </nav>
-          <div className="search-bar position-relative m-1">
+          <div className="search-bar">
             <input
-              className="search d-inline-block p-1"
+              className="search"
               type="search"
               name="search"
               id="search"
@@ -40,7 +40,7 @@ const Header = (props) => {
                 props.setCurrentPage(`home`);
               }}
             />
-            <div className="search-container position-absolute d-flex flex-column bg-light"></div>
+            <div className="search-container"></div>
           </div>
         </div>
       </header>

@@ -6,6 +6,13 @@
   min-height: 86vh;
 }
 
+@media only screen and (max-width: 768px) {
+  .home-section {
+    margin: 0;
+    width: 100%;
+  }
+}
+
 .home-section h1 {
   text-align: center;
 }

@@ -13,3 +13,17 @@
   text-align: center;
   margin: 1rem;
 }
+
+@media only screen and (max-width: 786px) {
+  .about-img {
+    width: 100%;
+    margin: 0;
+  }
+
+  html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
+}
