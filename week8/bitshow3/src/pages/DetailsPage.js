@@ -56,9 +56,9 @@ const DetailsPage = (props) => {
         <div
           className={props.listStyle ? `details-actors-grid` : `details-actors`}
         >
-          {props.cast.map((el) => {
+          {props.cast.map((el, i) => {
             return (
-              <div className="details-actor">
+              <div className="details-actor" key={i}>
                 <img
                   alt={el.person?.name}
                   className="details-portrait"

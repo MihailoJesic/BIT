@@ -15,7 +15,7 @@ const App = () => {
   const [showCast, setShowCast] = useState({});
   const [showDataLoaded, setShowDataLoaded] = useState(false);
   const [showCastLoaded, setShowCastLoaded] = useState({});
-  const [listStyle, setListStyle] = useState(false);
+  const [listStyle, setListStyle] = useState(true);
   const [searchQueary, setSearchQueary] = useState("");
   const [searchResults, setSearchResults] = useState({});
   const [searchResultsLoaded, setSearchResultsLoaded] = useState(false);
