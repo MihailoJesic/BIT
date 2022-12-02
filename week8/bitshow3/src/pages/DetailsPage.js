@@ -2,23 +2,30 @@ import React from "react";
 import "./DetailsPage.css";
 
 const DetailsPage = (props) => {
-  console.log(Array.isArray(props.cast));
   return (
     <section className="details-container">
       <div className="details-main">
         <div className="details-img-container">
-          <img className="details-img" src={props.data.image.original} alt="" />
+          <img
+            className="details-img"
+            src={
+              props.data?.image?.original
+                ? props.data?.image?.original
+                : `https://i.imgur.com/Z2MYNbj.png`
+            }
+            alt=""
+          />
         </div>
         <div className="details-text">
-          <h2 className="details-title">{props.data.name}</h2>
+          <h2 className="details-title">{props.data?.name}</h2>
           <div className="details-genre">
-            {props.data.genres.map((el, i) => {
+            {props.data?.genres.map((el, i) => {
               return <div key={`q` + i}>{el}</div>;
             })}
           </div>
           <div
             className="details-description"
-            dangerouslySetInnerHTML={{ __html: props.data.summary }}
+            dangerouslySetInnerHTML={{ __html: props.data?.summary }}
           ></div>
         </div>
       </div>
@@ -30,6 +37,7 @@ const DetailsPage = (props) => {
               className={props.listStyle ? `off` : `on`}
               onClick={() => {
                 props.setListStyle(!props.listStyle);
+                window.localStorage.setItem(`listStyle`, `true`);
               }}
             >
               Grid
@@ -38,22 +46,25 @@ const DetailsPage = (props) => {
               className={props.listStyle ? `on` : `off`}
               onClick={() => {
                 props.setListStyle(!props.listStyle);
+                window.localStorage.setItem(`listStyle`, `false`);
               }}
             >
               List
             </div>
           </div>
         </div>
-        <div className="details-actors">
+        <div
+          className={props.listStyle ? `details-actors-grid` : `details-actors`}
+        >
           {props.cast.map((el) => {
             return (
               <div className="details-actor">
                 <img
-                  alt={el.person.name}
+                  alt={el.person?.name}
                   className="details-portrait"
-                  src={el.person.image.medium}
+                  src={el.person?.image?.medium}
                 ></img>
-                <div className="details-name">{el.person.name}</div>
+                <div className="details-name">{el.person?.name}</div>
               </div>
             );
           })}

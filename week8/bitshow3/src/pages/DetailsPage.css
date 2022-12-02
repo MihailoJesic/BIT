@@ -1,6 +1,7 @@
 .details-container {
   width: 80%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .details-title {
@@ -46,13 +47,53 @@
   margin: 0.5rem 0.5rem;
   margin-left: 0;
   display: inline-block;
+  cursor: default;
 }
 
 .details-actors {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.details-actors-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-actors-grid .details-actor {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: static;
+  padding: 0rem 0.8rem;
+  margin: 0;
+  box-shadow: none;
+  border: 0.05rem solid lightgray;
+  border-radius: 0;
+}
+
+.details-actors-grid .details-portrait {
+  border-radius: 5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  object-fit: cover;
+}
+
+.details-actors-grid .details-name {
+  color: black;
+  position: static;
+  display: inline-block;
+  vertical-align: middle;
+  text-shadow: none;
+  font-weight: 500;
+}
+
+.details-actors-grid .details-actor:last-child {
+  margin-bottom: 2rem;
 }
 
 .details-actor {
@@ -61,7 +102,7 @@
   border-radius: 0.5rem;
   margin: 0.5rem;
   position: relative;
-  cursor: pointer;
+  cursor: default;
 }
 
 .details-portrait {
@@ -91,7 +132,7 @@
 }
 
 .on {
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   background-color: dodgerblue;
   border-radius: 0.5rem;
   margin: 0.5rem;
@@ -100,7 +141,7 @@
 }
 
 .off {
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   background-color: paleturquoise;
   color: gray;
   border-radius: 0.5rem;

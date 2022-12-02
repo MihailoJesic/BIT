@@ -7,11 +7,22 @@ const Header = (props) => {
       <header>
         <div className="header-container">
           <nav>
-            <div onClick={() => props.setCurrentPage(`home`)} className="logo">
+            <div
+              onClick={() => {
+                props.setCurrentPage(`home`);
+                props.setSearchQueary(``);
+                document.querySelector(`.search`).value = ``;
+              }}
+              className="logo"
+            >
               BitShow 2.0
             </div>
             <div
-              onClick={() => props.setCurrentPage(`about`)}
+              onClick={() => {
+                props.setCurrentPage(`about`);
+                props.setSearchQueary(``);
+                document.querySelector(`.search`).value = ``;
+              }}
               className="about"
             >
               About
@@ -24,6 +35,10 @@ const Header = (props) => {
               name="search"
               id="search"
               placeholder="Search..."
+              onChange={(e) => {
+                props.setSearchQueary(e.target.value);
+                props.setCurrentPage(`home`);
+              }}
             />
             <div className="search-container position-absolute d-flex flex-column bg-light"></div>
           </div>

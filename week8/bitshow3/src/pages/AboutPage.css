@@ -5,10 +5,11 @@
 }
 
 .about-img {
-  width: 50vmin;
+  width: 40vmin;
   margin: 0 auto;
 }
 
 .about-title {
   text-align: center;
+  margin: 1rem;
 }

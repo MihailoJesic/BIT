@@ -16,6 +16,7 @@ article:hover {
   width: 100%;
   margin-bottom: 0.5rem;
   box-shadow: 0 0.1rem 0.2rem 0.05rem darkslategray;
+  min-height: 2rem;
 }
 
 .rating {

@@ -26,6 +26,7 @@ const App = () => {
     if (currentPage === `home` && searchResultsLoaded !== false) {
       setPage(
         <HomePage
+          searchQueary={searchQueary}
           searchResults={searchResults}
           loaded={searchResultsLoaded}
           setCurrentPage={setCurrentPage}
@@ -34,14 +35,14 @@ const App = () => {
       );
     } else if (
       currentPage === `details` &&
-      showDataLoaded == true &&
+      showDataLoaded === true &&
       showCastLoaded === true
     ) {
       setPage(
         <DetailsPage
           data={showData}
           cast={showCast}
-          listSyle={listStyle}
+          listStyle={listStyle}
           setListStyle={setListStyle}
         ></DetailsPage>
       );
@@ -58,10 +59,13 @@ const App = () => {
     showDataLoaded,
     showCastLoaded,
     searchResultsLoaded,
+    listStyle,
   ]);
 
-  // TODO: Move the loader and Dependecy arr to a dedicated search function
+  //Populate top 50
+
   useEffect(() => {
+    if (searchQueary !== ``) return;
     setSearchResultsLoaded(false);
     fetch(`https://api.tvmaze.com/shows`)
       .then((res) => {
@@ -75,7 +79,30 @@ const App = () => {
         setSearchResults(top50);
         setSearchResultsLoaded(true);
       });
-  }, [searchQueary, searchResultsLoaded]);
+  }, [searchQueary]);
+
+  //Search function
+
+  useEffect(() => {
+    if (searchQueary === ``) return;
+
+    setSearchResultsLoaded(false);
+    console.log(searchQueary);
+
+    fetch(`https://api.tvmaze.com/search/shows?q=` + searchQueary)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        let output = res.map((el) => {
+          return el.show;
+        });
+        console.log(output);
+        setSearchResults(output);
+        setSearchResultsLoaded(true);
+      });
+  }, [searchQueary]);
 
   //Get Show details
 
@@ -105,13 +132,27 @@ const App = () => {
       });
   }, [show]);
 
+  // Load preferences
+
   useEffect(() => {
-    // console.log(`Results: `, searchResults);
+    let style = window.localStorage.getItem(`listStyle`);
+    if (style === `false`) {
+      setListStyle(false);
+    } else {
+      setListStyle(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    console.log(`Results: `, searchQueary);
   }, [searchResults]);
 
   return (
     <>
-      <Header setCurrentPage={setCurrentPage}></Header>
+      <Header
+        setCurrentPage={setCurrentPage}
+        setSearchQueary={setSearchQueary}
+      ></Header>
       {page}
       <Footer></Footer>
     </>
