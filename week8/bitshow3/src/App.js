@@ -76,7 +76,7 @@ const App = () => {
         let top50 = res.sort((a, b) => {
           return +a.rating.average < +b.rating.average;
         });
-        top50.length = 51;
+        top50.length = 48;
         setSearchResults(top50);
         setSearchResultsLoaded(true);
       });
