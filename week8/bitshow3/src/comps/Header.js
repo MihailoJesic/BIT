@@ -15,7 +15,7 @@ const Header = (props) => {
               }}
               className="logo"
             >
-              BitShow 2.0
+              BitShow 3.0
             </div>
             <div
               onClick={() => {

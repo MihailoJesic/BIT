@@ -62,7 +62,11 @@ const DetailsPage = (props) => {
                 <img
                   alt={el.person?.name}
                   className="details-portrait"
-                  src={el.person?.image?.medium}
+                  src={
+                    el.person?.image?.medium
+                      ? el.person?.image?.medium
+                      : `https://www.mountsinai.on.ca/wellbeing/our-team/team-images/person-placeholder/image`
+                  }
                 ></img>
                 <div className="details-name">{el.person?.name}</div>
               </div>
